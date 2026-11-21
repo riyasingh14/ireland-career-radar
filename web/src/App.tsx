@@ -12,11 +12,14 @@ import {
   Github,
   Pause,
   Play,
+  Moon,
+  Sun,
 } from "lucide-react";
 import { api, Bootstrap } from "./lib/api";
 import type { DescriptionTransfer } from "./lib/descriptionJourney";
 import DataCoverage from "./components/DataCoverage";
 import { useStudioMotion } from "./components/StudioMotion";
+import { useTheme } from "./hooks/useTheme";
 import AnalyticalSculpture from "./components/AnalyticalSculpture";
 import BuilderNote from "./components/BuilderNote";
 import Builder from "./pages/Builder";
@@ -305,6 +308,7 @@ function Methodology({ bootstrap }: { bootstrap: Bootstrap | null }) {
 }
 export default function App() {
   const motion = useStudioMotion();
+  const { theme, toggle } = useTheme();
   const [descriptionTransfer, setDescriptionTransfer] = useState<DescriptionTransfer | null>(null);
   const consumeTransfer = useCallback((id: string) => setDescriptionTransfer(current => current?.id === id ? null : current), []);
   const assessDescription = (input: DescriptionTransfer) => {
@@ -403,6 +407,15 @@ export default function App() {
             Methods
           </a>
         </nav>
+        <button
+          className="theme-toggle"
+          onClick={toggle}
+          aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          aria-pressed={theme === "dark"}
+        >
+          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+          <span>{theme === "dark" ? "Light" : "Dark"}</span>
+        </button>
         <button className="motion-control" onClick={motion.toggle} disabled={motion.reduced} aria-pressed={motion.enabled}>
           {motion.enabled ? <Pause size={12} /> : <Play size={12} />}
           {motion.reduced ? "Reduced motion" : motion.enabled ? "Pause motion" : "Enable motion"}

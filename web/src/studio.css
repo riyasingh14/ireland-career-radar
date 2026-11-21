@@ -27,7 +27,9 @@ body { background: radial-gradient(ellipse at 92% 8%, #e9eddc70, transparent 42%
 .site-header nav a { color: #444e47; font-size: .76rem; }
 .site-header nav a[aria-current="page"] { color: var(--electric); }
 .site-header nav a[aria-current="page"]:after { width: 100%; height: 1px; bottom: 9px; }
-.motion-control { display: inline-flex; gap: 7px; align-items: center; border: 1px solid #b7bcb0; border-radius: 30px; padding: 8px 10px; background: transparent; font-size: .65rem; white-space: nowrap; color: var(--ink); }
+.motion-control,
+.theme-toggle { display: inline-flex; gap: 7px; align-items: center; border: 1px solid #b7bcb0; border-radius: 30px; padding: 8px 10px; background: transparent; font-size: .65rem; white-space: nowrap; color: var(--ink); }
+.theme-toggle span { display: inline; }
 .motion-control:disabled { opacity: 1; cursor: default; color: var(--muted); }
 .demo-banner { font-family: ui-monospace, monospace; color: #4c564d; font-size: .59rem; letter-spacing: .04em; }
 .status-dot { background: var(--electric); width: 6px; height: 6px; }
@@ -419,3 +421,33 @@ button:disabled { cursor: not-allowed; }
 .journey-next-step p:not(.eyebrow), .journey-received p { font-size: .82rem; line-height: 1.8; max-width: 70ch; color: #493759; margin: 8px 0 0; }
 .journey-next-step .button, .journey-received button { flex-shrink: 0; }
 @media (max-width: 640px) { .journey-next-step, .journey-received { flex-direction: column; align-items: flex-start; padding: 21px; } }
+
+/* ── Dark mode overrides for studio.css ── */
+[data-theme="dark"] .site-header { border-color: var(--line); }
+[data-theme="dark"] .site-header nav a { color: var(--muted); }
+[data-theme="dark"] .site-header nav a[aria-current="page"] { color: var(--ink); }
+[data-theme="dark"] .site-header nav { background: var(--paper); }
+[data-theme="dark"] .motion-control,
+[data-theme="dark"] .theme-toggle { border-color: var(--line); color: var(--ink); }
+[data-theme="dark"] .motion-control:hover,
+[data-theme="dark"] .theme-toggle:hover { background: var(--panel); }
+[data-theme="dark"] .tool-card { background: var(--panel); border-color: var(--line); }
+[data-theme="dark"] .tool-card h3 { color: var(--ink); }
+[data-theme="dark"] .tool-card p { color: var(--muted); }
+[data-theme="dark"] .tool-card .scope { color: var(--muted); }
+[data-theme="dark"] .button { background: var(--teal); color: var(--paper); }
+[data-theme="dark"] .button-secondary { background: transparent; border-color: var(--line); color: var(--ink); }
+[data-theme="dark"] .builder-page { background: var(--paper); color: var(--ink); }
+[data-theme="dark"] .builder-note { background: var(--panel); border-color: var(--line); color: var(--ink); }
+[data-theme="dark"] .readiness-form { background: var(--panel); }
+[data-theme="dark"] .requirement-card { background: var(--panel); border-color: var(--line); }
+[data-theme="dark"] .evidence-badge { background: rgba(94, 201, 173, 0.12); color: var(--teal); }
+[data-theme="dark"] .gap-badge { background: rgba(224, 142, 109, 0.12); color: var(--clay); }
+[data-theme="dark"] .salary-bar { background: var(--line); }
+[data-theme="dark"] .salary-bar > span { background: var(--teal); }
+[data-theme="dark"] .flow-node { background: var(--panel); border-color: var(--line); color: var(--ink); }
+[data-theme="dark"] .constellation-svg circle { stroke: var(--line); }
+[data-theme="dark"] .constellation-svg text { fill: var(--ink); }
+[data-theme="dark"] .pair-stat { background: var(--panel); border-color: var(--line); }
+[data-theme="dark"] .diagnostic-highlight { background: rgba(94, 201, 173, 0.12); }
+[data-theme="dark"] .diagnostic-warning { background: rgba(224, 142, 109, 0.12); }

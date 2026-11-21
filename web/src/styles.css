@@ -5,8 +5,8 @@
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  color: #233d35;
-  background: #f8f7f2;
+  color: var(--ink, #233d35);
+  background: var(--paper, #f8f7f2);
   font-synthesis: none;
   font-weight: 400;
   line-height: 1.6;
@@ -17,6 +17,18 @@
   --clay: #b6613d;
   --paper: #f8f7f2;
   --panel: #fdfcf8;
+  --shadow: rgba(25, 62, 52, 0.08);
+}
+
+[data-theme="dark"] {
+  --ink: #e8f0ec;
+  --muted: #9db2a8;
+  --line: #2f3d37;
+  --teal: #5ec9ad;
+  --clay: #e08e6d;
+  --paper: #0f1412;
+  --panel: #1a211e;
+  --shadow: rgba(0, 0, 0, 0.35);
 }
 * {
   box-sizing: border-box;
@@ -1539,4 +1551,253 @@ blockquote small {
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] html,
+[data-theme="dark"] body,
+[data-theme="dark"] #root {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .site-header {
+  border-bottom-color: var(--line);
+}
+
+[data-theme="dark"] .brand-mark {
+  border-color: var(--line);
+}
+
+[data-theme="dark"] nav a {
+  color: var(--muted);
+}
+
+[data-theme="dark"] nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .menu-toggle {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .motion-control {
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .theme-toggle:hover,
+[data-theme="dark"] .motion-control:hover {
+  background: var(--panel);
+}
+
+[data-theme="dark"] .hero {
+  background: var(--paper);
+}
+
+[data-theme="dark"] .hero h1,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .lede,
+[data-theme="dark"] .caption,
+[data-theme="dark"] .eyebrow {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .intro-strip,
+[data-theme="dark"] .tools-section,
+[data-theme="dark"] .methodology-section,
+[data-theme="dark"] .builder-page,
+[data-theme="dark"] .tool-page {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .tool-card,
+[data-theme="dark"] .panel,
+[data-theme="dark"] .notice,
+[data-theme="dark"] .filter-bar,
+[data-theme="dark"] .evidence-facts > div,
+[data-theme="dark"] .walkthrough-list li,
+[data-theme="dark"] .definition-list > div,
+[data-theme="dark"] .skill-pill,
+[data-theme="dark"] .requirement-row,
+[data-theme="dark"] .comparison-row,
+[data-theme="dark"] .gap-row,
+[data-theme="dark"] .diagnostic-result,
+[data-theme="dark"] .readiness-summary,
+[data-theme="dark"] .evidence-item,
+[data-theme="dark"] .action-card,
+[data-theme="dark"] .flow-card,
+[data-theme="dark"] .job-card,
+[data-theme="dark"] .source-chip {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .notice {
+  background: rgba(94, 201, 173, 0.08);
+  border-color: var(--teal);
+}
+
+[data-theme="dark"] .button {
+  background: var(--teal);
+  color: var(--paper);
+}
+
+[data-theme="dark"] .button-secondary,
+[data-theme="dark"] .button-small {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .button-secondary:hover,
+[data-theme="dark"] .button-small:hover {
+  background: var(--panel);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--muted);
+}
+
+[data-theme="dark"] table {
+  border-color: var(--line);
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td {
+  border-color: var(--line);
+}
+
+[data-theme="dark"] th {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+[data-theme="dark"] td {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .text-link {
+  color: var(--teal);
+}
+
+[data-theme="dark"] .text-link:hover {
+  color: var(--clay);
+}
+
+[data-theme="dark"] .status-dot {
+  background: var(--teal);
+}
+
+[data-theme="dark"] .error {
+  background: rgba(224, 142, 109, 0.12);
+  color: var(--clay);
+  border-color: var(--clay);
+}
+
+[data-theme="dark"] footer {
+  border-top-color: var(--line);
+  color: var(--muted);
+}
+
+[data-theme="dark"] footer a:hover {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .dark-panel {
+  background: #141c19;
+  border-color: #2f3d37;
+}
+
+[data-theme="dark"] .dark-panel .eyebrow,
+[data-theme="dark"] .dark-panel h2,
+[data-theme="dark"] .dark-panel h3 {
+  color: #cfddc9;
+}
+
+[data-theme="dark"] .dark-panel p,
+[data-theme="dark"] .dark-panel .caption,
+[data-theme="dark"] .dark-panel .field {
+  color: #b8c9c0;
+}
+
+[data-theme="dark"] .dark-panel select {
+  background: #1f2b26;
+  color: #fff;
+  border-color: #35473c;
+}
+
+[data-theme="dark"] .analytical-sculpture {
+  background: var(--panel);
+}
+
+[data-theme="dark"] .breadcrumb {
+  color: var(--muted);
+}
+
+[data-theme="dark"] .breadcrumb a {
+  color: var(--teal);
+}
+
+[data-theme="dark"] .skill-node,
+[data-theme="dark"] .graph-node {
+  background: var(--panel);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .skill-node:hover,
+[data-theme="dark"] .graph-node:hover {
+  border-color: var(--teal);
+}
+
+[data-theme="dark"] .axis text,
+[data-theme="dark"] .tick text {
+  fill: var(--muted);
+}
+
+[data-theme="dark"] .axis line,
+[data-theme="dark"] .axis path {
+  stroke: var(--line);
+}
+
+[data-theme="dark"] .recharts-cartesian-grid-horizontal line,
+[data-theme="dark"] .recharts-cartesian-grid-vertical line {
+  stroke: var(--line);
+}
+
+[data-theme="dark"] .recharts-tooltip-wrapper {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .recharts-default-tooltip {
+  background: var(--panel) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+[data-theme="dark"] .recharts-tooltip-label {
+  color: var(--ink) !important;
+}
+
+[data-theme="dark"] .recharts-tooltip-item {
+  color: var(--muted) !important;
 }
