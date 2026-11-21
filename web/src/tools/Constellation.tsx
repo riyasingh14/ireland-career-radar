@@ -106,7 +106,6 @@ export default function Constellation({
     <section className="tool-page">
       <div className="tool-header">
         <div>
-          <p className="eyebrow">01 / SKILL RELATIONSHIPS</p>
           <h1>Skill Constellation</h1>
           <p className="lede">
             Find the combinations behind the keywords. Inspect every connection.
@@ -115,9 +114,6 @@ export default function Constellation({
         <div className="tool-symbol">
           <Network size={38} />
         </div>
-      </div>
-      <div className="notice">
-        {reviewed ? `Reviewed posting sample: ${release?.dataset_label}. This is limited to its documented sources and collection window; it is not complete Irish-market coverage.` : "Synthetic demonstration: all postings, employers and skill combinations in this public sample are fictional. They illustrate the method, not Irish market demand."}
       </div>
       <div className="filter-bar">
         <label className="field">
