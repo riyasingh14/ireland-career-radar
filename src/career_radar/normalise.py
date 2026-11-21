@@ -74,13 +74,13 @@ ROLE_RULES = {
     "Mobile Developer": ("mobile developer", "mobile engineer", "ios developer", "ios engineer", "android developer", "android engineer"),
     "Embedded Engineer": ("embedded engineer", "embedded software engineer", "firmware engineer"),
     "QA Engineer": ("qa engineer", "qa analyst", "test engineer", "automation test engineer", "software tester", "quality assurance engineer", "sdet"),
-    "DevOps / SRE": ("devops engineer", "site reliability engineer", "platform engineer"),
+    "DevOps / SRE": ("devops engineer", "site reliability engineer", "platform engineer", "infrastructure engineer"),
     "Cloud Engineer": ("cloud engineer", "cloud infrastructure engineer"),
     "Security Engineer": ("security engineer", "cybersecurity analyst", "cyber security analyst", "security analyst", "soc analyst"),
     "Network Engineer": ("network engineer", "network administrator"),
-    "IT Support": ("it support", "technical support engineer", "service desk analyst", "desktop support"),
+    "IT Support": ("it support", "technical support engineer", "service desk analyst", "desktop support", "systems administrator"),
     "Solutions Architect": ("solutions architect", "solution architect", "cloud architect", "software architect", "technical architect"),
-    "Software Engineer": ("software engineer", "software developer", "application developer"),
+    "Software Engineer": ("software development engineer", "sde", "software engineer", "software developer", "application developer", "principal engineer", "staff engineer", "tech lead", "technical lead"),
     "Product Manager": ("product manager", "technical product manager", "product owner"),
     "Data Analyst": ("data analyst", "analytics analyst"),
     "Business Analyst": ("business analyst", "business systems analyst"),
@@ -94,6 +94,12 @@ def geography_group(location: str) -> str:
     text = (location or "").lower()
     if "northern ireland" in text or "united kingdom" in text or re.search(r"\b(uk|belfast)\b", text):
         return "Outside scope / unknown"
+    # Some Dublin-area names omit the word "Ireland".
+    if "greater dublin" in text or re.search(r"\bfingal\b", text):
+        return "Dublin"
+    # Standalone "Dublin" from an Irish source context is unambiguous.
+    if text.strip() == "dublin":
+        return "Dublin"
     if not re.search(r"\bireland\b", text):
         return "Outside scope / unknown"
     if re.search(r"\bdublin\b", text):

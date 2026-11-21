@@ -1,0 +1,26 @@
+{
+  "collected_from": "2026-11-21T20:06:44+00:00",
+  "collected_through": "2026-11-21T20:06:44+00:00",
+  "dataset_fingerprint": "259055fe1ffe1e06b4ccd5774451ecea1146094c40b541ab13a36ad535a1af67",
+  "dataset_label": "Ireland tech roles from approved Greenhouse boards, 2026-11-21",
+  "expires_at": "2026-12-21T20:06:44+00:00",
+  "geographic_scope": "Ireland",
+  "owner_approved": true,
+  "published_at": "2026-11-21T20:06:44+00:00",
+  "release_id": "greenhouse-tech-2026-11-21",
+  "schema_version": "approved-public-release-v1",
+  "snapshot_sha256": "ad0034d674095623d678974848a680bbc90cc6376ef839006cae3e1ac4fa67bc",
+  "sources": [
+    {
+      "collected_from": "2026-11-21T20:06:44+00:00",
+      "collected_through": "2026-11-21T20:06:44+00:00",
+      "collection_authorized": true,
+      "homepage_url": "https://www.greenhouse.io",
+      "permission_basis": "Public job postings collected via the Greenhouse API from company career pages (Flipdish, Tines, Intercom, Grafana Labs, Gong.io, Sonatus, Speechify, CarGurus, Toast, Ripple, Contentful, HubSpot, Fivetran) after reviewing each board's public terms for portfolio analytical use.",
+      "public_display_authorized": true,
+      "source_name": "Approved Greenhouse sources",
+      "terms_reviewed_on": "2026-11-21",
+      "terms_url": "https://www.greenhouse.io/terms"
+    }
+  ]
+}

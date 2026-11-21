@@ -38,7 +38,6 @@ const tools = [
     method: "Co-mention counts · Jaccard similarity · lift",
     scope: "Explore a clearly labelled fictional sample.",
     text: "See which skills appear together in job descriptions, then trace each connection to the exact words behind it.",
-    tag: "SKILL RELATIONSHIPS",
     icon: Network,
   },
   {
@@ -51,7 +50,6 @@ const tools = [
     method: "Weighted requirements · evidence tracking · what-if analysis",
     scope: "Preparation guidance, not interview odds.",
     text: "Compare a job description with what you can demonstrate. Find your strengths, evidence gaps and useful next steps.",
-    tag: "SELF-REPORTED EVIDENCE",
     icon: Compass,
   },
   {
@@ -64,7 +62,6 @@ const tools = [
     method: "Seeded simulation · cohort analysis · salary distributions",
     scope: "Synthetic scenarios, not observed salary outcomes.",
     text: "Explore simulated career paths and salary changes. Adjust the assumptions and inspect the events behind each result.",
-    tag: "SYNTHETIC SCENARIOS",
     icon: Route,
   },
   {
@@ -77,7 +74,6 @@ const tools = [
     method: "Rule-based extraction · exact source spans · human review",
     scope: "Checks the wording; does not rate the employer.",
     text: "Paste a job description to find unclear requirements, missing information and wording that needs a second look.",
-    tag: "DESCRIPTION ANALYSIS",
     icon: ScanText,
   },
 ];
